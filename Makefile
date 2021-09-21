@@ -34,6 +34,7 @@ clean:
 fclean: clean
 	make -C $(LIB_PATH) fclean
 	rm -f $(NAME)
+
 re: fclean all
 
 call: all clean

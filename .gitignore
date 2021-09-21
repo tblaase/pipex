@@ -53,6 +53,6 @@ dkms.conf
 
 # Testfiles etc.
 *.txt
-main.c
+main*
 pipex
 debug

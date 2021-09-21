@@ -12,6 +12,7 @@ CFILES = \
 		ft_strdup.c\
 		ft_strjoin.c\
 		ft_strlen.c\
+		ft_strncmp.c\
 		ft_substr.c\
 
 OBJECTS = $(CFILES:.c=.o)
