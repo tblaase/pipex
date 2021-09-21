@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 13:11:24 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/20 14:52:43 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/20 19:46:04 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,6 @@
 
 void	ft_parent_process(int f2, t_data data)
 {
+	(void)f2;
+	(void)data;
 }
