@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 12:34:57 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/21 17:19:31 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/22 12:30:04 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	**ft_split(const char *s, char c);
 char	*ft_strchr(const char *s, int c);
 void	ft_child_1(t_data *data, char **file, char **envp);
 void	ft_child_2(t_data *data, char **file, char **envp);
+void	ft_free_struct(t_data *data);
 
 #endif

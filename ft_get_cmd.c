@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parent_process.c                                :+:      :+:    :+:   */
+/*   ft_get_cmd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 13:11:24 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/20 19:46:04 by tblaase          ###   ########.fr       */
+/*   Created: 2021/09/22 14:45:17 by tblaase           #+#    #+#             */
+/*   Updated: 2021/09/22 17:40:04 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-void	ft_parent_process(int f2, t_data data)
-{
-	(void)f2;
-	(void)data;
-}
+// void	ft_get_cmd(t_data *data)
+// {
+// 	int	check;
+// }

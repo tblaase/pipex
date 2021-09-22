@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 18:06:14 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/20 20:30:36 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/22 12:15:43 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strjoin(const char *s1, const char *s2)
 /* will append s2 to s1
-** will do nothing if s2 is NULL
-** this is a modified version, it will ad a '/' between the strings*/
+** will do nothing if s1 or s2 is NULL
+** this is a modified version, it will ad a '/' between the strings */
 {
 	char	*c;
 	int		i;
 	int		i2;
 
-	if (!s2)
-		return (0);
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	i2 = 0;
 	c = malloc(ft_strlen(s1) + ft_strlen(s2) + 2);
