@@ -6,6 +6,7 @@ CFILES = \
 			ft_child_1.c\
 			ft_child_2.c\
 			ft_free_struct.c\
+			ft_get_path.c\
 			ft_init.c\
 			pipex.c\
 
