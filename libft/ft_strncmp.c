@@ -6,13 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 12:03:48 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/21 12:03:49 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/24 12:26:26 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
+/* recreates the behavior of strncmp from string.h */
 {
 	size_t			i;
 	size_t			strlen1;

@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 14:55:10 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/20 18:35:07 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/24 12:29:20 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static unsigned int	ft_count_words(const char *s, char c)
 	int	str_nbr;
 	int	i;
 
-	if (!s[0])
+	if (!s)
 		return (0);
 	str_nbr = 0;
 	i = 0;
@@ -78,11 +78,11 @@ char	**ft_split(const char *s, char c)
 	unsigned int	b;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	b = ft_count_words(s, c);
 	mainstr = (char **)malloc(b * sizeof(char *) + 1 * sizeof(char *));
-	if (mainstr == '\0')
-		return (0);
+	if (!mainstr)
+		return (NULL);
 	ft_write_words(s, c, mainstr, b);
 	return (mainstr);
 }

@@ -53,7 +53,10 @@ dkms.conf
 
 # Testfiles etc.
 *.txt
+input
+output
 main*
 pipex
 debug
 pipexMedic/
+.vscode/

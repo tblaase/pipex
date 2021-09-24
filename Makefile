@@ -2,6 +2,8 @@ NAME = pipex
 
 LIB_PATH = libft/
 
+LIB = $(LIB_PATH)libft.a
+
 CFILES = \
 			ft_child_1.c\
 			ft_child_2.c\
@@ -14,13 +16,9 @@ OBJECTS = $(CFILES:.c=.o)
 
 CC = gcc
 
-DEBUG = clang
-
 CFLAGS = -Wall -Werror -Wextra
 
-DEBUGFLAGS = -g
-
-FILE = output.txt
+FILE = output
 
 all: subsystem $(NAME)
 
@@ -28,7 +26,7 @@ subsystem:
 	make -C $(LIB_PATH) all
 
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) $(LIB_PATH)libft.a -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJECTS) $(LIB) -o $(NAME)
 
 clean:
 	make -C $(LIB_PATH) clean
@@ -43,10 +41,3 @@ re: fclean all
 call: all clean
 	make -C $(LIB_PATH) fclean
 	[[ -f $(FILE) ]] && rm $(FILE) || true
-
-d:
-	$(DEBUG) $(DEBUGFLAGS) $(CFILES) $(LIB_PATH)*.c -o debug
-	lldb debug
-
-clean_d:
-	rm -f debug

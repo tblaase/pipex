@@ -6,13 +6,15 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 13:31:02 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/23 16:22:42 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/24 12:07:08 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
 static int	ft_get_path_1(t_data *data)
+/* will search for the correct path of command 1
+** returns 1 and print error if not found */
 {
 	int		i;
 
@@ -30,6 +32,8 @@ static int	ft_get_path_1(t_data *data)
 }
 
 static int	ft_get_path_2(t_data *data)
+/* will search for the correct path of command 2
+** returns 1 and print error if not found */
 {
 	int		i;
 
@@ -47,6 +51,7 @@ static int	ft_get_path_2(t_data *data)
 }
 
 int	ft_get_paths(t_data *data)
+/* will find the correct path of the function, returns 1 if not found*/
 {
 	int	a;
 	int	b;
@@ -54,6 +59,9 @@ int	ft_get_paths(t_data *data)
 	a = ft_get_path_1(data);
 	b = ft_get_path_2(data);
 	if (a == 1 || b == 1)
+	{
+		ft_free_struct(data);
 		return (1);
+	}
 	return (0);
 }

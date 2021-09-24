@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:08:15 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/20 18:36:01 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/24 12:16:25 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strchr(const char *s, int c)
 	char	a;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	a = c;
 	i = 0;
 	while (s[i] != '\0' && s[i] != a)

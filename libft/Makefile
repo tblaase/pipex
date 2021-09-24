@@ -9,7 +9,6 @@ CFILES = \
 		ft_free_array.c\
 		ft_split.c\
 		ft_strchr.c\
-		ft_strdup.c\
 		ft_strjoin.c\
 		ft_strlen.c\
 		ft_strncmp.c\
