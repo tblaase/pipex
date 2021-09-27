@@ -6,7 +6,7 @@ This is my solution for the pipex project of the Core Curriculum of 42 school.<b
 
 This project should recreate all the behavior of the pipe command `|`.<br>
 This includes error messages and error handling.<br>
-The Error messages this code will print are not a exact recreation of those the pipe command will print.<br>
+The error messages this code will print are not a exact recreation of those the pipe command will print.<br>
 Every of my error messages will tell you what went wrong and after that the error that is stored in errno i.e.<br>
 `Command 1 not found: No such file or directory`<br>
 his code works with all known special cases that i know of i.e. <br>
