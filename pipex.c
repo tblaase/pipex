@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 12:40:09 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/24 12:08:39 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/27 09:38:30 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ static void	ft_pipex(t_data *data, char **argv, char **envp)
 	if (child_1 < 0)
 	{
 		ft_free_struct(data);
-		return (perror("Fork failed"));
+		perror("Fork failed");
+		exit(EXIT_FAILURE);
 	}
 	if (child_1 == 0)
 		ft_child_1(data, argv, envp);
@@ -31,7 +32,8 @@ static void	ft_pipex(t_data *data, char **argv, char **envp)
 	if (child_2 < 0)
 	{
 		ft_free_struct(data);
-		return (perror("Fork failed"));
+		perror("Fork failed");
+		exit(EXIT_FAILURE);
 	}
 	if (child_2 == 0)
 		ft_child_2(data, argv, envp);
@@ -59,10 +61,8 @@ int	main(int argc, char **argv, char **envp)
 		perror("File 1 not found");
 		return (1);
 	}
-	if (ft_init(argv, envp, &data) == 1)
-		return (1);
-	if (ft_get_paths(&data) == 1)
-		return (1);
+	ft_init(argv, envp, &data);
+	ft_get_paths(&data);
 	ft_pipex(&data, argv, envp);
 	return (0);
 }

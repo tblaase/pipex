@@ -6,13 +6,13 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 14:15:55 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/24 12:06:52 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/27 09:13:15 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	ft_init(char **argv, char **envp, t_data *data)
+void	ft_init(char **argv, char **envp, t_data *data)
 /* will read all the input data and prepare it for further processing */
 {
 	int		i;
@@ -29,7 +29,6 @@ int	ft_init(char **argv, char **envp, t_data *data)
 	{
 		perror("Error when initialising data");
 		ft_free_struct(data);
-		return (1);
+		exit(EXIT_FAILURE);
 	}
-	return (0);
 }

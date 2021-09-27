@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 14:43:56 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/24 11:56:18 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/27 09:24:57 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ void	ft_child_2(t_data *data, char **argv, char **envp)
 	if (dup2(data->file_out, STDOUT_FILENO) < 0)
 		return (perror("dup2"));
 	execve(data->cmd_path2, data->cmd2, envp);
+	perror("Error");
 	exit(EXIT_FAILURE);
 }
