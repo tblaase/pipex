@@ -1,5 +1,6 @@
 # pipex 100/100 (September 2021)
 This is my solution for the pipex project of the Core Curriculum of 42 school.<br>
+<br>
 <img src="images/result.png"><br>
 
 ## Explanation of my code
@@ -45,8 +46,9 @@ The output will be the same as if you run<br>
 less pipex.c | grep argv > output
 ```
 
-
-This is how the output looks for `./pipex pipex.c less "grep argv" output` and `less pipex.c | grep argv > output`<br>
+<br>
+This is how the output of my given example looks like.<br>
+<br>
 <img src="images/example.png"><br>
 <br>
 
