@@ -50,6 +50,6 @@ This is how the output looks for `./pipex pipex.c less "grep argv" output` and `
 <img src="images/example.png"><br>
 <br>
 
-# If you find mistakes
+## If you find mistakes
 
 As always, if you find mistakes, feel free to open an issue and/or contact me.<br>
