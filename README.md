@@ -1,6 +1,6 @@
 # pipex 100/100 (September 2021)
 This is my solution for the pipex project of the Core Curriculum of 42 school.<br>
-<img src="images/result.png" width=200/><br>
+<img src="images/result.png"><br>
 
 ## Explanation of my code
 
