@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 17:08:15 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/27 20:53:05 by tblaase          ###   ########.fr       */
+/*   Created: 2021/09/27 20:21:16 by tblaase           #+#    #+#             */
+/*   Updated: 2021/09/27 20:53:30 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
-/* will return a pointer to the position of first appearance of c in s
+char	*ft_strrchr(const char *s, int c)
+/* will return a pointer to the position of last appearance of c in s
 ** will return a pointer to NULL if not found */
 {
 	char	a;
@@ -22,9 +22,9 @@ char	*ft_strchr(const char *s, int c)
 	if (!s)
 		return (NULL);
 	a = c;
-	i = 0;
-	while (s && s[i] != '\0' && s[i] != a)
-		i++;
+	i = ft_strlen(s);
+	while (s && s[i] != a && i > 0)
+		i--;
 	if (s[i] == a)
 		return ((char *)(s + i));
 	else

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 17:08:15 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/27 20:53:05 by tblaase          ###   ########.fr       */
+/*   Created: 2021/09/27 20:42:43 by tblaase           #+#    #+#             */
+/*   Updated: 2021/09/27 20:51:42 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
-/* will return a pointer to the position of first appearance of c in s
-** will return a pointer to NULL if not found */
+char	*ft_strdup(const char *s1)
+/* will malloc for the given string and return adress to that string */
 {
-	char	a;
 	int		i;
+	char	*s;
 
+	if (!s1)
+		return (NULL);
+	i = 0;
+	s = malloc(ft_strlen(s1) + 1);
 	if (!s)
 		return (NULL);
-	a = c;
-	i = 0;
-	while (s && s[i] != '\0' && s[i] != a)
+	while (s1[i] != '\0')
+	{
+		s[i] = s1[i];
 		i++;
-	if (s[i] == a)
-		return ((char *)(s + i));
-	else
-		return (NULL);
+	}
+	s[i] = '\0';
+	return (s);
 }

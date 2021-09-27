@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 12:34:57 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/27 09:21:28 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/27 19:54:53 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 /* ********** STRUCT TO HAND VARIABLES BETWEEN FUNCTIONS ********** */
 typedef struct s_data
 {
+	int		flag1;
+	int		flag2;
 	int		end[2];
 	int		file_in;
 	int		file_out;

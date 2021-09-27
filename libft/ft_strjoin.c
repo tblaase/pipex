@@ -6,13 +6,13 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 18:06:14 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/22 12:15:43 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/27 21:14:28 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(const char *s1, const char *s2, char divider)
 /* will append s2 to s1
 ** will do nothing if s1 or s2 is NULL
 ** this is a modified version, it will ad a '/' between the strings */
@@ -33,7 +33,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		c[i] = s1[i];
 		i++;
 	}
-	c[i++] = '/';
+	c[i++] = divider;
 	while (s2[i2] != '\0')
 	{
 		c[i] = s2[i2];

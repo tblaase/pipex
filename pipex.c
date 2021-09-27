@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 12:40:09 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/27 09:38:30 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/27 21:27:09 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,12 @@ static void	ft_pipex(t_data *data, char **argv, char **envp)
 
 	child_1 = fork();
 	if (child_1 < 0)
-	{
-		ft_free_struct(data);
 		perror("Fork failed");
-		exit(EXIT_FAILURE);
-	}
 	if (child_1 == 0)
 		ft_child_1(data, argv, envp);
 	child_2 = fork();
 	if (child_2 < 0)
-	{
-		ft_free_struct(data);
 		perror("Fork failed");
-		exit(EXIT_FAILURE);
-	}
 	if (child_2 == 0)
 		ft_child_2(data, argv, envp);
 	waitpid(-1, NULL, 0);
@@ -59,7 +51,7 @@ int	main(int argc, char **argv, char **envp)
 	if (access(argv[1], F_OK) != 0)
 	{
 		perror("File 1 not found");
-		return (1);
+		data.flag1 = 1;
 	}
 	ft_init(argv, envp, &data);
 	ft_get_paths(&data);
