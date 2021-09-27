@@ -17,12 +17,13 @@ his code works with all known special cases that i know of i.e. <br>
 
 ## How to use this code
 
-This will compile the project:<br>
+This will compile the project.<br>
 
 ```
 make all
 ```
 
+<br>
 This will compile the project and remove every no longer needed `.o` and `.a` files, so you are only left with your executable called `pipex`.<br>
 This will also remove the file called `output` if it exists.<br>
 
@@ -30,16 +31,25 @@ This will also remove the file called `output` if it exists.<br>
 make call
 ```
 
+<br>
 This is an example on what input to give to run the programm "correctly".<br>
 
 ```
 ./pipex pipex.c less "grep argv" output
 ```
 
+<br>
 The output will be the same as if you run<br>
 
 ```
 less pipex.c | grep argv > output
 ```
 
+
+This is how the output looks for `./pipex pipex.c less "grep argv" output` and `less pipex.c | grep argv > output`<br>
 <img src="images/example.png"><br>
+<br>
+
+# If you find mistakes
+
+As always, if you find mistakes, feel free to open an issue and/or contact me.<br>
