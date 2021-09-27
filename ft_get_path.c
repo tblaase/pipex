@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 13:31:02 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/27 21:43:23 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/27 22:24:41 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ static void	ft_get_path_2(t_data *data)
 		temp = ft_strrchr(data->cmd2[0], '/') + 1;
 		free(data->cmd2[0]);
 		data->cmd2[0] = ft_strdup(temp);
-		fprintf(stderr, "HELLO\n");
 		return ;
 	}
 	i = 0;
