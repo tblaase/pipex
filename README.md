@@ -36,14 +36,14 @@ make call
 This is an example on what input to give to run the programm "correctly".<br>
 
 ```
-./pipex pipex.c less "grep argv" output
+./pipex pipex.c less wc output
 ```
 
 <br>
 The output will be the same as if you run<br>
 
 ```
-less pipex.c | grep argv > output
+less pipex.c | wc > output
 ```
 
 <br>
