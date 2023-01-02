@@ -26,8 +26,8 @@ char	*ft_strjoin(const char *s1, const char *s2, char divider)
 	i = 0;
 	i2 = 0;
 	c = malloc(ft_strlen(s1) + ft_strlen(s2) + 2);
-	if (c == '\0')
-		return (0);
+	if (c == NULL)
+		return (NULL);
 	while (s1[i] != '\0')
 	{
 		c[i] = s1[i];
